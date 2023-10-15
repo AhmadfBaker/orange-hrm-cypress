@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es5",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "node",
+      "@shelex/cypress-allure-plugin",
+      "cypress-plugin-api"
+    ],
+    "allowJs": true,
+    "baseUrl": "./",
+    "noEmit": true
+  },
+  "include": [
+    "**/*/*.ts",
+    "**/*/*.js"
+  ]
+}

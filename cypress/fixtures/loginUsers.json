@@ -1,0 +1,21 @@
+[
+  {
+    "name": "should login to Dashboard page",
+    "username": "Admin",
+    "password": "admin123",
+    "expected": "Dashboard"
+  },
+  {
+    "name": "should display incorrect username error message",
+    "username": "dummy_username",
+    "password": "admin123",
+    "expected": "Invalid credentials"
+  },
+
+  {
+    "name": "should display incorrect password error message",
+    "username": "Admin",
+    "password": "dummy_password",
+    "expected": "Invalid credentials"
+  }
+]
