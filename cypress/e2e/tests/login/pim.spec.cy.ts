@@ -103,7 +103,7 @@ describe("PIM Module - Employee management functionality", () => {
 
   });
 
-  it.only("Should show error if username already exists when creating login", () => {
+  it("Should show error if username already exists when creating login", () => {
     const employee = {
       firstName: faker.person.firstName(),
       middleName: faker.person.middleName(),

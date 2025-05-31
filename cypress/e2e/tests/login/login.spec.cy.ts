@@ -29,42 +29,42 @@ describe("Login functionality", () => {
       cy.contains("Invalid credentials").should("be.visible");
     });
   
-    it("should show error for invalid username and invalid password", () => {
+    it("Should show error for invalid username and invalid password", () => {
       cy.get('input[name="username"]').type("WrongUser");
       cy.get('input[name="password"]').type("wrongpass");
       cy.get('button[type="submit"]').click();
       cy.contains("Invalid credentials").should("be.visible");
     });
   
-    it("should show required message when username is empty and password is valid", () => {
+    it("Should show required message when username is empty and password is valid", () => {
       cy.get('input[name="username"]').clear();
       cy.get('input[name="password"]').type("admin123");
       cy.get('button[type="submit"]').click();
       cy.get(".oxd-input-group__message").first().should("contain", "Required");
     });
   
-    it("should show required message when username is empty and password is invalid", () => {
+    it("Should show required message when username is empty and password is invalid", () => {
       cy.get('input[name="username"]').clear();
       cy.get('input[name="password"]').type("wrongpass");
       cy.get('button[type="submit"]').click();
       cy.get(".oxd-input-group__message").first().should("contain", "Required");
     });
   
-    it("should show required message when password is empty and username is valid", () => {
+    it("Should show required message when password is empty and username is valid", () => {
       cy.get('input[name="username"]').type("Admin");
       cy.get('input[name="password"]').clear();
       cy.get('button[type="submit"]').click();
       cy.get(".oxd-input-group__message").last().should("contain", "Required");
     });
   
-    it("should show required message when password is empty and username is invalid", () => {
+    it("Should show required message when password is empty and username is invalid", () => {
       cy.get('input[name="username"]').type("WrongUser");
       cy.get('input[name="password"]').clear();
       cy.get('button[type="submit"]').click();
       cy.get(".oxd-input-group__message").last().should("contain", "Required");
     });
   
-    it("should show required messages when both username and password are empty", () => {
+    it("Should show required messages when both username and password are empty", () => {
       cy.get('input[name="username"]').clear();
       cy.get('input[name="password"]').clear();
       cy.get('button[type="submit"]').click();
@@ -72,7 +72,7 @@ describe("Login functionality", () => {
       cy.get(".oxd-input-group__message").eq(1).should("contain", "Required");
     });
   
-    it("should mask password input by default", () => {
+    it("Should mask password input by default", () => {
       cy.get('input[name="password"]').should("have.attr", "type", "password");
     });
   });
