@@ -53,7 +53,7 @@ describe("Login functionality", () => {
       cy.get(".oxd-input-group__message").last().should("contain", "Required");
     });
   
-    it("Should show required message when password is empty and username is invalid - 1", () => {
+    it("Should show required message when password is empty and username is invalid", () => {
       cy.get('input[name="username"]').type("WrongUser");
       cy.get('input[name="password"]').clear();
       cy.get('button[type="submit"]').click();
