@@ -2,6 +2,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  
   e2e: {
     setupNodeEvents(on, config) {
       require('@cypress/grep/src/plugin')(config);
@@ -36,6 +37,8 @@ module.exports = defineConfig({
     baseUrl: 'https://api.realworld.io',
     // baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php'
     //url: 'https://api.realworld.io',
+    projectId: "33d926",
 
   },
+  
 });
