@@ -1,0 +1,8 @@
+jobs:
+  trigger-jenkins:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins Job
+        run: |
+          curl -X POST http://localhost:8080/job/orange-hrm-main/build \
+            --user your-username:11c1bb0002fd18f99b7d783327b41e9266
