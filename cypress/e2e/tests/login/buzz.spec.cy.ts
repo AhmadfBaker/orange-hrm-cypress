@@ -8,7 +8,7 @@ describe("Buzz Module - User post interactions", () => {
         cy.get(".oxd-main-menu-item").contains("Buzz").click();
     });
 
-    it("should create a new buzz post and verify the text appears", () => {
+    it("Should create a new buzz post and verify the text appears", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.get(".oxd-toast").should("contain", "Successfully Saved");
@@ -18,7 +18,7 @@ describe("Buzz Module - User post interactions", () => {
         })
     });
 
-    it("should create and edit a buzz post, then verify toast message", () => {
+    it("Should create and edit a buzz post, then verify toast message", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.then(() => {
@@ -38,7 +38,7 @@ describe("Buzz Module - User post interactions", () => {
         })
     });
 
-    it("should create and delete a buzz post, then verify toast message", () => {
+    it("Should create and delete a buzz post, then verify toast message", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.then(() => {
