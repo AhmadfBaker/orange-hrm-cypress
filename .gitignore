@@ -8,6 +8,7 @@
 /allure-report
 /allure-results
 /cypress/results
+/cypress.config.ts
 # testing
 /coverage
 
