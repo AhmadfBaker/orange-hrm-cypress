@@ -60,7 +60,7 @@ describe("Login functionality", () => {
       cy.get(".oxd-input-group__message").last().should("contain", "Required");
     });
   
-    it("Should show required messages when both username and password are empty", () => {
+    it("Should show required messages when both username and password are empty ", () => {
       cy.get('input[name="username"]').clear();
       cy.get('input[name="password"]').clear();
       cy.get('button[type="submit"]').click();
