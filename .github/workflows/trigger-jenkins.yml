@@ -1,3 +1,8 @@
+name: Trigger e2e cypress - Jenkins Job
+
+on:
+  push:
+
 jobs:
   trigger-jenkins:
     runs-on: ubuntu-latest
