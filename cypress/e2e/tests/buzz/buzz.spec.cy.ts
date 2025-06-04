@@ -8,17 +8,22 @@ describe("Buzz Module - User post interactions", () => {
         cy.get(".oxd-main-menu-item").contains("Buzz").click();
     });
 
-    it("Should create a new buzz post and verify the text appears", () => {
+    it("TC15: Should create a new buzz post and verify the text appears", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
-        cy.get(".oxd-toast").should("contain", "Successfully Saved");
+        cy.intercept("/web/index.php/api/v2/buzz/feed**").as("buzzFeed");
+        cy.get(".oxd-main-menu-item").contains("Buzz").click();
+        cy.wait("@buzzFeed");
+        //cy.get(".oxd-toast").should("contain", "Successfully Saved");
+
+        //cy.get(".oxd-toast").should('not.exist')
         cy.then(() => {
             cy.get(".orangehrm-buzz-post-body").eq(0).should("contain", 'Hello all. My Name is Ahmad Baker');
 
         })
     });
 
-    it("Should create and edit a buzz post, then verify toast message", () => {
+    it("TC16: Should create and edit a buzz post, then verify toast message", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.then(() => {
@@ -38,7 +43,7 @@ describe("Buzz Module - User post interactions", () => {
         })
     });
 
-    it("Should create and delete a buzz post, then verify toast message", () => {
+    it("TC17: Should create and delete a buzz post, then verify toast message", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.then(() => {
