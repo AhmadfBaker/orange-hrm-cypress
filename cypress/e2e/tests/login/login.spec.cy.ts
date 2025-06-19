@@ -5,7 +5,7 @@ describe("Login functionality", () => {
   });
 
   it("TC01: Should log in successfully with valid username and password", () => {
-    cy.get('input[name="username"]').type("Admin");
+    cy.get('input[name="username"]').type("Admin1");
     cy.get('input[name="password"]').type("admin123");
     cy.get('button[type="submit"]').click();
     cy.url().should("include", "/dashboard");
