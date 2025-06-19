@@ -69,6 +69,6 @@ describe("Login functionality", () => {
   });
 
   it("TC10: Should mask password input by default", () => {
-    cy.get('input[name="password"]').should("have.attr", "type", "password")
+    cy.get('input[name="password"]').should("have.attr", "type", "password");
   });
 });
