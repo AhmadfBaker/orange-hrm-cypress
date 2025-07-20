@@ -12,7 +12,7 @@ describe("PIM Module - Employee management functionality", () => {
     cy.get(".oxd-main-menu-item").contains("PIM").click();
   });
 
-  it("TC11: Should add a new employee without login details", () => {
+  it("TC39: Should add a new employee without login details", () => {
     const employee = {
       firstName: faker.person.firstName(),
       middleName: faker.person.middleName(),
@@ -30,7 +30,7 @@ describe("PIM Module - Employee management functionality", () => {
     cy.get(".oxd-toast").should("contain", "Successfully Saved");
   });
 
-  it("TC12: Should add a new employee with login credentials", () => {
+  it("TC40: Should add a new employee with login credentials", () => {
     const employee = {
       firstName: faker.person.firstName(),
       middleName: faker.person.middleName(),
@@ -55,7 +55,7 @@ describe("PIM Module - Employee management functionality", () => {
     cy.get(".oxd-toast").should("contain", "Successfully Saved");
   });
 
-  it("TC13: Should search for an employee by ID after adding", () => {
+  it("TC41: Should search for an employee by ID after adding", () => {
     const employee = {
       firstName: faker.person.firstName(),
       middleName: faker.person.middleName(),
@@ -91,7 +91,7 @@ describe("PIM Module - Employee management functionality", () => {
 
   });
 
-  it("TC14: Should show error if username already exists when creating login", () => {
+  it("TC42: Should show error if username already exists when creating login", () => {
     const employee = {
       firstName: faker.person.firstName(),
       middleName: faker.person.middleName(),

@@ -71,4 +71,21 @@ describe("Login functionality", () => {
   it("TC10: Should mask password input by default", () => {
     cy.get('input[name="password"]').should("have.attr", "type", "password");
   });
+
+  it("TC11: Should allow login with uppercase username", () => {
+    cy.get('input[name="username"]').clear().type("ADMIN");
+    cy.get('input[name="password"]').clear().type("admin123");
+    cy.get('button[type="submit"]').click();
+    cy.url().should("include", "/dashboard");
+    cy.get(".oxd-userdropdown-tab").click();
+    cy.contains("Logout").click();
+  });
+
+  it("TC12: Should not allow login with uppercase password", () => {
+    cy.get('input[name="username"]').clear().type("Admin");
+    cy.get('input[name="password"]').clear().type("ADMIN123");
+    cy.get('button[type="submit"]').click();
+    cy.contains("Invalid credentials").should("be.visible");
+  });
+
 });

@@ -8,7 +8,7 @@ describe("Buzz Module - User post interactions", () => {
         cy.get(".oxd-main-menu-item").contains("Buzz").click();
     });
 
-    it("TC15: Should create a new buzz post and verify the text appears", () => {
+    it("TC43: Should create a new buzz post and verify the text appears", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.intercept("/web/index.php/api/v2/buzz/feed**").as("buzzFeed");
@@ -23,7 +23,7 @@ describe("Buzz Module - User post interactions", () => {
         })
     });
 
-    it("TC16: Should create and edit a buzz post, then verify toast message", () => {
+    it("TC44: Should create and edit a buzz post, then verify toast message", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.then(() => {
@@ -43,7 +43,7 @@ describe("Buzz Module - User post interactions", () => {
         })
     });
 
-    it("TC17: Should create and delete a buzz post, then verify toast message", () => {
+    it("TC45: Should create and delete a buzz post, then verify toast message", () => {
         cy.get('.oxd-buzz-post-input').type('Hello all. My Name is Ahmad Baker');
         cy.get(".oxd-buzz-post-slot").click();
         cy.then(() => {
