@@ -12,7 +12,7 @@ describe("Extended Login functionality", () => {
     });
 
     it("TC14: Should retain input after invalid login attempt", () => {
-        cy.get('input[name="username"]').type("Admin");
+        cy.get('input[name="username"]').type("Admin"); 
         cy.get('input[name="password"]').type("wrongpass");
         cy.get('button[type="submit"]').click();
         cy.get('input[name="username"]').should("not.have.value", "Admin");

@@ -10,7 +10,7 @@ describe("Main Navigation - Module Access and Page Validation", () => {
     it("TC46: Should navigate to Time module and validate page", () => {
         cy.get(".oxd-main-menu-item").contains("Time").click();
         cy.url().should("include", "/time/viewEmployeeTimesheet");
-        cy.get('.oxd-topbar-header-title').should("contain", "Time");
+        cy.get('.oxd-topbar-header-title').should("contain", "Time"); 
     });
 
     it("TC47: Should navigate to Recruitment module and validate page", () => {
