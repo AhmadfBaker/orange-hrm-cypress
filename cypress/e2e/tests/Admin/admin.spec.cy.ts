@@ -1,4 +1,4 @@
-describe("Extended Login functionality", () => {
+describe("Extended Login functionality ", () => {
     beforeEach(() => {
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         cy.get('input[name="username"]').should("be.visible");
