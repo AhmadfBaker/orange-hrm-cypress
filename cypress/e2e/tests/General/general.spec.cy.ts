@@ -7,7 +7,7 @@ describe("Main Navigation - Module Access and Page Validation 1", () => {
         cy.get(".oxd-topbar-header-title").should("contain", "Dashboard");
     });
 
-    it("TC46: Should navigate to Time module and validate page", () => {
+    it("TC46: Should navigate to Time module and validate page 1", () => {
         cy.get(".oxd-main-menu-item").contains("Time").click();
         cy.url().should("include", "/time/viewEmployeeTimesheet");
         cy.get('.oxd-topbar-header-title').should("contain", "Time"); 
