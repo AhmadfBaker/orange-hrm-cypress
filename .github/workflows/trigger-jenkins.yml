@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Trigger Jenkins Job
         run: |
-          curl -X POST https://10f0-43-245-159-9.ngrok-free.app/job/orange-hrm-main/build \
+          curl -X POST https://adcd3a24ef35.ngrok-free.app/job/orange-hrm-main/build \
             --user ahmadb:${{ secrets.JENKINS_API_TOKEN }}
