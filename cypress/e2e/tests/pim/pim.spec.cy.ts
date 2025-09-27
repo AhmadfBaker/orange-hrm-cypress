@@ -1,7 +1,7 @@
 
 import { faker } from '@faker-js/faker';
 
-describe("PIM Module - Employee management functionality", () => {
+describe("PIM Module - Employee management functionality 1", () => {
 
   beforeEach(() => {
     cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
