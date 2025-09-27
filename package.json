@@ -21,7 +21,7 @@
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "@types/faker": "^6.6.11",
     "allure-commandline": "^2.24.0",
-    "cypress": "14.4.0",
+    "cypress": "15.0.0",
     "mocha-allure-reporter": "^1.4.0",
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.1.0",

@@ -18,6 +18,7 @@ module.exports = defineConfig({
       snapshotOnly: true,
        //tags: "test"
     },
+    experimentalMemoryManagement: true,
     reporter: 'mochawesome',
     reporterOptions: {
       mochaFile: 'cypress-results/cypress-report.xml',
@@ -38,6 +39,7 @@ module.exports = defineConfig({
     // baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php'
     //url: 'https://api.realworld.io',
     projectId: "33d926",
+    experimentalStudio: true
 
   },
   
