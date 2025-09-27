@@ -1,4 +1,4 @@
-describe("Main Navigation - Module Access and Page Validation", () => {
+describe("Main Navigation - Module Access and Page Validation 1", () => {
     beforeEach(() => {
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         cy.get('input[name="username"]').type("Admin");
